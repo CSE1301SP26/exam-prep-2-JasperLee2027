@@ -13,7 +13,10 @@ public class Q02 {
 	*
 	**/
 	public static void dashedLine(double x) {
-		
+		//my code
+		for (y=0, y<1, y+0.04) {
+			StdDraw.line(x,y,x,y+0.02);
+		}
 	}
 
 	public static void main(String[] args) {
