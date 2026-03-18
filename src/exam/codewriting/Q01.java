@@ -5,7 +5,7 @@ import edu.princeton.cs.introcs.StdDraw;
 public class Q01 {
 
 	public static void recursiveCarpet ( double xCtr , double yCtr , double halfLength ) {
-		//your code here
+		//your code here	//how can i tell how far away the new squares are, do i just eyeball it? (ex. halfLength+0.02))
 		if (halfLength<=0.05){
 			return;
 		}
