@@ -6,6 +6,16 @@ public class Q01 {
 
 	public static void recursiveCarpet ( double xCtr , double yCtr , double halfLength ) {
 		//your code here
+		if (halfLength<=0.05){
+			return;
+		}
+		else {
+			StdDraw.filledSquare(xCtr, yCtr, halfLength);
+			recursiveCarpet(xCtr + halfLength, yCtr + halfLength, halfLength/2);
+			recursiveCarpet(xCtr + halfLength, yCtr - halfLength, halfLength/2);
+			recursiveCarpet(xCtr - halfLength, yCtr + halfLength, halfLength/2);
+			recursiveCarpet(xCtr - halfLength, yCtr - halfLength, halfLength/2);
+		}
 	}
 
 	public static void main(String[] args) {
