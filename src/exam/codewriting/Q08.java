@@ -24,9 +24,31 @@ public class Q08 {
 	 */
 
 	public static int[] countValues (int[][] a, int findMe ) {
-		return new int[0]; //fix me
+		return countValuesHelper (a, findMe, index)
 	}
-
+	//my code (recursive)
+	public static int[] countValuesHelper (int[][] a, int findMe, int index) {
+		i= index;
+		
+	//or 2nd code (iteration)
+		public static int[] countValues (int[][] a, int findMe ) {
+			int rows = a.length;
+			int cols = a[0].length;
+			int[] result = new int[cols];	
+			
+			for (int col = 0; col < cols; col++) {
+   				int count = 0;
+   				
+				for (int row = 0; row < rows; row++) {
+			        if (a[row][col] == findMe) {
+			            count++;
+			        }
+	 		   }
+   				result[col] = count;
+			}
+			retrun result;
+		}
+	
 	public static void main ( String[] args ) {
 		int [][] a = {
 				{1, 2, 4},
