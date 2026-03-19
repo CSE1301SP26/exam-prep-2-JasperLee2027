@@ -25,14 +25,25 @@ public class Q06 {
 	//You should use a helper method as part of your recursive implementation.
 	
 	public static double sqrtR( double x) {
-		return 0; //fix me
+		return sqrtRHelper (x, x, x/2);
 	}
-
+	
+	public static double sqrtRHelper(double x, double xOld, double xNew) {
+		
+		if (Math.abs(xNew-xOld))<0.001) {
+			return (xNew);
+		}
+		
+		double newOld= xNew;
+		double newNew= ( xNew + (x / xNew )) / 2;
+		
+		return sqrtRHelper (x, newOld, newNew);
+	}
 
 	public static void main ( String[] args ) {
 		System.out.println(sqrt(5)); //given method
 		
-		System.out.println(sqrt(5)); //your recursive method
+		System.out.println(sqrtR(5)); //your recursive method
 		
 	}
 
