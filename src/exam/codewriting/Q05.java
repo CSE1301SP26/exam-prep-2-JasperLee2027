@@ -18,8 +18,32 @@ public class Q05 {
 	appropriately. It is not necessary to use recursion for this problem. Complete the method below:
 	*/
 	public static int countValue (int[] a, int findMe ) {
-		return 0; //fix me
+		//my code (iteration)
+		int count = 0;
+		for (int i=0; i<a.lenght; i++) {
+			if (a[i]== findMe) {
+				count++;
+			}
+		}
+		return count;
 	}
+		//my code2 (recursion)
+   	public static int countValue (int[] a, int findMe ) {
+		return countHelper(a, findMe, 0);
+	}
+		
+	private static int countHelper(int[] a, int findMe, int index) {
+		if (index >= a.length) {
+	        return 0;
+	    }
+	    if (a[index] == findMe) {
+	        return 1 + countHelper(a, findMe, index + 1);
+	    } 
+		else {
+	        return countHelper(a, findMe, index + 1);
+	    }
+	}	
+	
 
 
 	public static void main ( String[] args ) {
