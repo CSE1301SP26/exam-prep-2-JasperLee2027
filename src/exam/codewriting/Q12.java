@@ -6,6 +6,14 @@ public class Q12 {
 
 	public static void rDraw ( double xCtr , double yCtr , double size ) {
 		//your code here
+		if (size<0.01) {
+			return;
+		}
+		else {
+			StdDraw.square (xCtr, yCtr, size)
+			rDraw (xCtr-size, yCtr+size, size/2)
+			rDraw (xCtr+size, yCtr-size, size/2)
+				}
 	}
 
 	public static void main(String[] args) {
