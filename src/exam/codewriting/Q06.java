@@ -27,7 +27,7 @@ public class Q06 {
 	public static double sqrtR( double x) {
 		return sqrtRHelper (x, x, x/2);
 	}
-	
+	//my code (helper method)
 	public static double sqrtRHelper(double x, double xOld, double xNew) {
 		
 		if (Math.abs(xNew-xOld))<0.001) {
