@@ -13,7 +13,14 @@ public class Q04 {
 	array.
 	 */
 	public static double[] fillDoubleArray (int n, Scanner in) {
-		return null; //fix me
+		//my code
+		double[] DoubleArray = new double[n];
+		
+		for (i=0; i<DoubleArray.length; i++) {
+			DoubleArray[i] = in.nextDouble;
+		}
+		
+		return DoubleArray;
 	}
 
 	/*
@@ -24,7 +31,16 @@ public class Q04 {
 	 */
 	public static void main ( String[] args ) {
 		Scanner in = new Scanner ( System .in );
-		//use StdDraw.polygon and fillDoubleArray
+		//use StdDraw.polygon and fillDoubleArray (my code)
+		
+		System.out.println("How many sides?");
+		int n = in.nextInt();
+
+		double[] x = fillDoubleArray(n, in);
+		double[] y = fillDoubleArray(n, in);
+
+		StdDraw.polygon (x, y);
+		
 	}
 
 }
