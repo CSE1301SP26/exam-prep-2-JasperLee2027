@@ -10,9 +10,9 @@ public class Q12 {
 			return;
 		}
 		else {
-			StdDraw.square (xCtr, yCtr, size)
-			rDraw (xCtr-size, yCtr+size, size/2)
-			rDraw (xCtr+size, yCtr-size, size/2)
+			StdDraw.square (xCtr, yCtr, size);
+			rDraw (xCtr-size, yCtr+size, size/2);
+			rDraw (xCtr+size, yCtr-size, size/2);
 				}
 	}
 
